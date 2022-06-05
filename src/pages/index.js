@@ -1,35 +1,60 @@
-import React from "react";
+import React from 'react';
+import Link from "../components/Link"
 import {
   HeroSection,
+  BrandSection,
   FeatureSection,
+  ContentSectionOne,
+  ContentSectionTwo,
+  ContentSectionThree,
+  IntegrationSection,
+  PricingSection,
   FooterSection,
-  TestimonialSection,
-} from "../sections/gdg";
+  TestimonialSection
+} from "../sections/software"
 
-import { BannerSection } from "../sections/gdg/Gallery";
-import HomeSponsorBody from "../sections/gdg/Gallery/GalleryBody/home_sponsors";
-import Data from "../data/Sponsors";
-import PageWrapper from "../components/PageWrapper";
+import PageWrapper from '../components/PageWrapper'
+
+
 
 const Header = {
-  headerClasses: "site-header--menu-end site-header--sticky light-header",
-  containerFluid: false,
-  darkLogo: true,
-};
-const gdg = () => {
-  return (
-    <PageWrapper headerConfig={Header}>
-      <HeroSection />
-      <FeatureSection />
-      <TestimonialSection />
-      <BannerSection
-        title="Our Current & Former Sponsors"
-        text="Our precious partners and sponsors has contributed to many successful events."
-      />
-      <HomeSponsorBody images={Data.Sponsors1} isViewAll={true} />
-      <FooterSection />
-    </PageWrapper>
-  );
-};
+  headerClasses:"site-header--menu-center site-header--sticky dark-header",
+  containerFluid:true
+}
 
-export default gdg;
+const HeaderButton = ()=>{
+  return(
+    <div className="header-btns  header-btns  ms-auto d-none d-xs-inline-flex">
+      <Link className="btn log-in-btn focus-reset" to="#">
+        Login
+      </Link>
+      <Link className="btn sign-in-btn focus-reset" to="#">
+        Sign In
+      </Link>
+    </div>
+  )
+}
+const HomePage = () =>{
+    return (
+      <PageWrapper headerConfig={Header} HeaderButton={<HeaderButton/>}>
+        <HeroSection/>
+        <BrandSection/>
+        <FeatureSection/>
+        <ContentSectionOne/>
+        <ContentSectionTwo />
+        <ContentSectionThree />
+        <TestimonialSection />
+        <IntegrationSection />
+         <PricingSection/>
+         <FooterSection/>
+      </PageWrapper>
+    )
+}
+
+export default HomePage;
+
+
+
+
+
+

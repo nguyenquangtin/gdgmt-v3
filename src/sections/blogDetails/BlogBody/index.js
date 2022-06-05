@@ -1,5 +1,4 @@
 import React from "react"
-// import Link  from "next/link"
 import Sidebar from "./component/Sidebar"
 import BlogCardImage from "../../../assets/image/blog/blog-img-1.png"
 const BlogBody = () => {

@@ -1,5 +1,5 @@
 import React from "react"
-import Link  from "next/link"
+import Link from "../../../components/Link"
 import JobCard from './components/Card'
 import {jobData} from './data'
 const JobSection = () => {

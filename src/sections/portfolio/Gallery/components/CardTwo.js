@@ -1,5 +1,5 @@
 import React from "react"
-import Link  from "next/link"
+import Link from "../../../../components/Link"
 
 export default function Card({ image, titlSmall, title }) {
   return (
@@ -9,8 +9,8 @@ export default function Card({ image, titlSmall, title }) {
             <img src={image} alt="portfolio" className="w-100" />
             </Link>
             <div className="text-start  text-block  gr-bg-opacity d-block ">
-            <span className=" d-block ponter-event-none">{titlSmall}</span>
-            <h3>{title}</h3>
+            <span className=" d-block ponter-event-none">Kaktus</span>
+            <h3>Candy Store</h3>
             </div>
         </div>
     </>

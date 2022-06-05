@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components";
+import Head from "next/head";
 import Header from "../Header"
 import Link  from "../Link";
-import { Helmet } from "react-helmet";
 import favicon from '../../assets/image/favicon.png'
 import Preloader from '../../assets/image/preloader.gif'
 const innerHeader = {
@@ -30,23 +30,13 @@ const Loader = styled.div`
     visibility: hidden;
   }
 `;
-// const InnerHeaderButton = () => {
-//   return (
-//     <div className="inner-header-buttons  ms-auto d-none d-xs-inline-flex pe-3">
-//       <Link className="btn log-in-btn focus-reset" to="/sign-in">
-//         Login
-//       </Link>
-//       <Link className="btn sign-in-btn focus-reset" to="/sign-up">
-//         Sign In
-//       </Link>
-//     </div>
-//   )
-// }
+
 export default function PageWrapper({
   headerConfig,
   HeaderButton,
   children,
   innerPageHeader,
+  preloader = true,
 }) {
   const [visibleLoader, setVisibleLoader] = React.useState(true);
   React.useEffect(() => {
@@ -56,11 +46,11 @@ export default function PageWrapper({
   }, []);
   return (
     <>
-    <Helmet>
-      <title>GDG Mientrung</title>
-      <link rel="icon" type="image/png" href={favicon} />
-    </Helmet>
-    <Loader id="loading" className={visibleLoader ? "" : "inActive"}>
+    <Head>
+          <title>Sandar</title>
+          <link rel="icon" type="image/png" href={favicon} />
+    </Head>
+      <Loader id="loading" className={visibleLoader ? "" : "inActive"}>
           <img src={Preloader} alt="loader" className={visibleLoader ? "d-block" : "d-none"}/>
       </Loader>
       <div className={`site-wrapper ${visibleLoader ?  "" : "show"}`}>

@@ -1,5 +1,5 @@
 import React from "react"
-import Link  from "next/link"
+import Link from "../components/Link"
 import { Form } from "react-bootstrap";
 import { FooterSection } from "../sections/InnerPages"
 import PageWrapper from "../components/PageWrapper"

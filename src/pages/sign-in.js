@@ -1,6 +1,6 @@
 
 import React from "react"
-import Link  from "next/link"
+import Link from "../components/Link"
 
 import background from '../assets/image/contact/contact-side-bg.png'
 import reviewerImage from '../assets/image/landing-1/reviewer-1.png'

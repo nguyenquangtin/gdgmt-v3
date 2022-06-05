@@ -38,7 +38,7 @@ const Menu = () => {
                           id={name + index}
                           renderMenuOnMount={true}
                           className={`main-nav-item megadropdown `}
-                          
+
                         >
                           <Container>
                           <Row>
@@ -58,9 +58,10 @@ const Menu = () => {
                                       {items.col_1.title && <span className="megamenu-column-title">{items.col_1.title}</span>}
                                       {items.col_1.items.map((item, index) => {
                                         return (
-                                          <Nav.Item className="megamenu-nav-item" 
+                                          <Nav.Item className="megamenu-nav-item"
                                           key={index + "c1"}>
                                             <Link
+                                              href={`/${item.name}`}
                                               to={`/${item.name}`}
                                             >
                                               {item.label}
@@ -75,7 +76,7 @@ const Menu = () => {
                                     {items.col_2.title && <span className="megamenu-column-title">{items.col_2.title}</span>}
                                       {items.col_2.items.map((item, index) => {
                                         return (
-                                          <Nav.Item className="megamenu-nav-item" 
+                                          <Nav.Item className="megamenu-nav-item"
                                           key={index + "c2"}>
                                             <Link
                                               to={`/${item.name}`}
@@ -111,7 +112,7 @@ const Menu = () => {
                                           <Nav.Item className="megamenu-nav-item" key={index + "c5"}>
                                             <Link
                                               to={`/${item.name}`}
-                                              
+
                                             >
                                               {item.label}
                                             </Link>
@@ -128,7 +129,7 @@ const Menu = () => {
                                           <Nav.Item className="megamenu-nav-item" key={index + "c6"}>
                                             <Link
                                               to={`/${item.name}`}
-                                              
+
                                             >
                                               {item.label}
                                             </Link>
@@ -145,7 +146,7 @@ const Menu = () => {
                                           <Nav.Item className="megamenu-nav-item" key={index + "c7"}>
                                             <Link
                                               to={`/${item.name}`}
-                                              
+
                                             >
                                               {item.label}
                                             </Link>
@@ -181,7 +182,7 @@ const Menu = () => {
                                     id={subItem.name + indexSub}
                                     renderMenuOnMount={true}
                                     className="drop-menu-item innerDropdown"
-                                   
+
                                   >
                                     {subItem.items.map(
                                       (itemInner, indexInnerMost) => (

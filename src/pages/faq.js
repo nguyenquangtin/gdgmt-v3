@@ -25,7 +25,7 @@ const Faq =()=>{
   </div>
   <div className="faq-main-area">
     <div className="container">
-      <div className="row justify-content-center">
+      <div className="row">
         <div className="col-lg-3">
           <div className="faq-main-tab-area sticky">
             <ul className="list-unstyled">

@@ -33,7 +33,6 @@ export default function MainContent() {
                           image={image}
                           titleSmall={titleSmall}
                           title={title}
-                          key={index + "spd"}
                         />
                       )
                     }

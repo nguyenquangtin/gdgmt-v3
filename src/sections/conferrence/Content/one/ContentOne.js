@@ -1,5 +1,5 @@
 import React from "react"
-import Link  from "next/link"
+import Link from "../../../../components/Link"
 import imageOne from "../../../../assets/image/landing-3/video-main-img.png"
 import imageTwo from "../../../../assets/image/landing-3/video-shape-1.png"
 import imageThree from "../../../../assets/image/landing-3/video-shape-2.png"

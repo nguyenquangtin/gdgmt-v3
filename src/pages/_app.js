@@ -5,8 +5,8 @@ import "../../node_modules/react-modal-video/scss/modal-video.scss";
 import "../../node_modules/swiper/swiper.scss";
 import "../assets/scss/main.scss"
 import "../assets/scss/react-scss.scss"
-
 import "../assets/fonts/fontawesome-5/css/all.min.css"
+
 import Layout from "../components/Layout";
 
 
