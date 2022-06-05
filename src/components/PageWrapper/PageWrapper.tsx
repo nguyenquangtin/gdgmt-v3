@@ -1,14 +1,14 @@
 import React from "react"
 import styled from "styled-components";
 import Header from "../Header"
-import Link  from "../Link";
+import Link from "../Link";
 import { Helmet } from "react-helmet";
 import favicon from '../../assets/image/favicon.png'
 import Preloader from '../../assets/image/preloader.gif'
 const innerHeader = {
   headerClasses: "site-header--menu-center light-header position-relative inner-page-header",
   containerFluid: true,
-  darkLogo:true
+  darkLogo: true
 }
 const Loader = styled.div`
   position: fixed;
@@ -56,19 +56,19 @@ export default function PageWrapper({
   }, []);
   return (
     <>
-    <Helmet>
-      <title>GDG Mientrung</title>
-      <link rel="icon" type="image/png" href={favicon} />
-    </Helmet>
-    <Loader id="loading" className={visibleLoader ? "" : "inActive"}>
-          <img src={Preloader} alt="loader" className={visibleLoader ? "d-block" : "d-none"}/>
+      <Helmet>
+        <title>GDG Mientrung</title>
+        <link rel="icon" type="image/png" href={favicon} />
+      </Helmet>
+      <Loader id="loading" className={visibleLoader ? "" : "inActive"}>
+        <img src={Preloader} alt="loader" className={visibleLoader ? "d-block" : "d-none"} />
       </Loader>
-      <div className={`site-wrapper ${visibleLoader ?  "" : "show"}`}>
-      <Header
-        headerConfig={innerPageHeader ? innerHeader : headerConfig}
+      <div className={`site-wrapper ${visibleLoader ? "" : "show"}`}>
+        <Header
+          headerConfig={innerPageHeader ? innerHeader : headerConfig}
         // buttonBlock={innerPageHeader ? <InnerHeaderButton /> : HeaderButton}
-      />
-      {children}
+        />
+        {children}
       </div>
     </>
   )

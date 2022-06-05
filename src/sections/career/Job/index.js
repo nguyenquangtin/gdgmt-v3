@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import Link  from "next/link"
 import JobCard from './components/Card'
 import {jobData} from './data'
 const JobSection = () => {

@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import Link  from "next/link"
 import logo from "../../../assets/image/logo/logo-black.png"
 export default function FooterSection({ ...rest }) {
   return (

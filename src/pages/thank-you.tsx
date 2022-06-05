@@ -1,11 +1,11 @@
 import React from "react"
-import { Link } from "gatsby"
+import Link from "next/link"
 import { FooterSection } from "../sections/InnerPages"
 import ThankYouImage from "../assets/image/thankyou.png"
 import PageWrapper from '../components/PageWrapper'
 const ThankYouPage = () => {
   return (
-    <PageWrapper  innerPageHeader={true}>
+    <PageWrapper innerPageHeader={true}>
       {/* Thank you  Area  */}
       <div className="thank-you-page">
         <div className="container">

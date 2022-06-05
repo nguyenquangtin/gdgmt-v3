@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import Link  from "next/link"
 // import Blog from '../../../../assets/image/blog/blog-img-1.png'
 import PostRecent from "./PostRecent"
 

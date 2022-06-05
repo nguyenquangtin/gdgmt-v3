@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import Link  from "next/link"
 import { IconLocation, IconClock } from "./Icons"
 export default function JobCard() {
   return (

@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import Link  from "next/link"
 import TeamCard from "./components/Card"
 import Data from "./data"
 const TeamSection = ({ className }) => {

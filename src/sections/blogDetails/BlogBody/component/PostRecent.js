@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from "gatsby"
+import Link  from "next/link"
 const PostRecent = ({image,title,date})=>{
     return(
         <div className="d-flex recent-post-item">

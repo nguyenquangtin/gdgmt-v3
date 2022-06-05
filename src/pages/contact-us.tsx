@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import Link from "next/link"
 import { Form } from "react-bootstrap";
 import { FooterSection } from "../sections/InnerPages"
 import PageWrapper from "../components/PageWrapper"
@@ -94,7 +94,7 @@ const ContactUs = () => {
                     </div>
                   </div>
                   <div className="col-lg-12">
-                    <button className="btn focus-reset"  type="submit">Send</button>
+                    <button className="btn focus-reset" type="submit">Send</button>
                   </div>
                 </div>
               </Form>

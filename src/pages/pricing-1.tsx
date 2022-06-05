@@ -1,13 +1,13 @@
-import React,{useState} from "react"
-import { Link } from "gatsby"
+import React, { useState } from "react"
+import Link from "next/link"
 import { FooterSection } from "../sections/InnerPages"
 import PageWrapper from '../components/PageWrapper'
 const Pricing = () => {
-  const [yearly,setYearly] = useState(false);
+  const [yearly, setYearly] = useState(false);
   return (
     <PageWrapper innerPageHeader={true}>
       <div className="pricing-area-l1-1 pricing-01-area">
-      <div
+        <div
           className="container"
           id="table-price-value"
           data-pricing-dynamic
@@ -56,7 +56,7 @@ const Pricing = () => {
                   />
                 </h2>
                 <p>per month</p>
-                
+
                 <ul className="list-unstyled">
                   <li className="d-flex justify-content-center">
                     02 Active Accounts
@@ -94,9 +94,9 @@ const Pricing = () => {
                     data-yearly={199}
                   />
                 </h2>
-                
+
                 <p>per month</p>
-                
+
                 <ul className="list-unstyled">
                   <li className="d-flex justify-content-center">
                     02 Active Accounts
@@ -134,7 +134,7 @@ const Pricing = () => {
                     data-yearly={499}
                   />
                 </h2>
-                
+
                 <p>per month</p>
                 <ul className="list-unstyled text-center">
                   <li className="d-flex justify-content-center">

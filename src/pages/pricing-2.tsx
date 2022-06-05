@@ -1,9 +1,9 @@
-import React,{useState} from "react"
-import { Link } from "gatsby"
+import React, { useState } from "react"
+import Link from "next/link"
 import { FooterSection } from "../sections/InnerPages"
 import PageWrapper from '../components/PageWrapper'
 const Pricing = () => {
-  const [yearly,setYearly] = useState(false);
+  const [yearly, setYearly] = useState(false);
   return (
     <PageWrapper innerPageHeader={true}>
       <div className="priceing-area-l8-1 pricing-02-area">
@@ -11,7 +11,7 @@ const Pricing = () => {
           className="container"
           id="table-price-value"
           data-pricing-dynamic
-          data-value-active={yearly?"yearly":"monthly"}
+          data-value-active={yearly ? "yearly" : "monthly"}
         >
           <div className="row justify-content-center">
             <div className="col-xl-4 col-lg-5">
@@ -318,28 +318,28 @@ const Pricing = () => {
                     <div className="price_item" />
                     <div className="price_item">
 
-                      <Link  to="#" className="price_btn btn_hover">
+                      <Link to="#" className="price_btn btn_hover">
 
                         Get started <i className="fas fa-arrow-right" />
                       </Link>
                     </div>
                     <div className="price_item">
 
-                      <Link  to="#" className="price_btn btn_hover">
+                      <Link to="#" className="price_btn btn_hover">
 
                         Get started <i className="fas fa-arrow-right" />
                       </Link>
                     </div>
                     <div className="price_item price-get-started-btn-3">
 
-                      <Link  to="#" className="price_btn btn_hover">
+                      <Link to="#" className="price_btn btn_hover">
 
                         Get started <i className="fas fa-arrow-right" />
                       </Link>
                     </div>
                     <div className="price_item">
 
-                      <Link  to="#" className="price_btn btn_hover">
+                      <Link to="#" className="price_btn btn_hover">
 
                         Get started <i className="fas fa-arrow-right" />
                       </Link>
