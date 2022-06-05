@@ -1,5 +1,5 @@
 import React from "react"
-import Link from "../components/Link"
+import Link  from "next/link"
 import { FooterSection } from "../sections/InnerPages"
 import ThankYouImage from "../assets/image/thankyou.png"
 import PageWrapper from '../components/PageWrapper'

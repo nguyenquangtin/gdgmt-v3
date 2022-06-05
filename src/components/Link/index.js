@@ -1,15 +1,13 @@
 import React from "react"
 
-import LinkComponent from "./component";
+import Link from "next/link";
 
-const Link = ({children,to, ...rest}) => {
+const LinkComponent = ({ children, to, ...rest }) => {
   return <>
-    <LinkComponent to={to}>
-        <a  {...rest}>
-          {children}
-        </a>
-    </LinkComponent>
+    <Link href={to}>
+      {children}
+    </Link>
   </>
 }
 
-export default Link
+export default LinkComponent

@@ -1,6 +1,6 @@
 import React from "react"
 import CountDown from "../sections/comingsoon/CountDown"
-const Soon = () => {
+const ErrorPage = () => {
   return (
     <>
       <div className="coming-soon-page">
@@ -42,4 +42,4 @@ const Soon = () => {
   )
 }
 
-export default Soon
+export default ErrorPage

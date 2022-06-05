@@ -4,6 +4,7 @@ import Menu from "./Menu"
 import siteBrandLight  from "../../assets/image/logo/logo-white.png"
 import siteBrandDark  from "../../assets/image/logo/logo-black.png"
 const SiteNavbar = ({buttonBlock,darkLogo,siteLogoUrl}) => {
+
   return (
     <>
       <Navbar
@@ -15,9 +16,9 @@ const SiteNavbar = ({buttonBlock,darkLogo,siteLogoUrl}) => {
       >
         <Navbar.Brand href="/">
           {siteLogoUrl ? (
-            <img src={siteLogoUrl} alt="site-brand"/>
+            <img src={siteLogoUrl} alt="GDG Mientrung"/>
           ) : (
-            <img src={darkLogo ? siteBrandDark : siteBrandLight} alt="site-brand"/>
+            <img src={darkLogo ? siteBrandDark : siteBrandLight} alt="GDG Mientrung"/>
           )}
         </Navbar.Brand>
         <Navbar.Toggle

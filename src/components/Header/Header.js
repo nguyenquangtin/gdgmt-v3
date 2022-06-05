@@ -12,6 +12,8 @@ const defaultValues = {
 const Header = ({ headerConfig = defaultValues, buttonBlock }) => {
   const [showScrolling, setShowScrolling] = useState(false)
   const [showReveal, setShowReveal] = useState(false)
+  const [hasMounted, setHasMounted] = React.useState(false);
+
 
   const { headerClasses, darkLogo, siteLogoUrl, containerFluid } = headerConfig
   useScrollPosition(({ prevPos, currPos }) => {
@@ -26,7 +28,12 @@ const Header = ({ headerConfig = defaultValues, buttonBlock }) => {
       setShowReveal(false)
     }
   })
-
+  React.useEffect(() => {
+    setHasMounted(true);
+  }, []);
+  if (!hasMounted) {
+    return null;
+  }
   return (
     <SiteHeader
       className={`${headerClasses} ${showScrolling ? "scrolling" : ""} ${

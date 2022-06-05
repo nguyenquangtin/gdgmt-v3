@@ -1,5 +1,5 @@
-/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
-    Portfolio main     CSS 
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    Portfolio main     CSS
         <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 .portfolio-banner {
   // margin-top: 70px;
@@ -44,9 +44,8 @@
       }
 
       @include desktops {
-        font-size: 60px;
+        font-size: 48px;
       }
-
     }
 
     p {
@@ -57,11 +56,7 @@
       letter-spacing: -0.66px;
       line-height: 34px;
     }
-
-
-
   }
-
 }
 
 .portfolio-banner-content--2 {
@@ -74,11 +69,6 @@
   @include tablet {
     padding-top: 80px;
   }
-
-  @include desktops {
-    padding-top: 120px;
-  }
-
 }
 
 .portfolio-card-masonry {
@@ -127,7 +117,7 @@
   left: 20px;
   right: 20px;
   opacity: 0;
-  transition: .4s;
+  transition: 0.4s;
   padding: 30px 15px 15px 30px;
 }
 
@@ -136,11 +126,11 @@
 }
 
 .portfolio-card-hover .card-image {
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .portfolio-card-hover .card-image img {
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .portfolio-card-hover:hover .card-image {
@@ -152,14 +142,12 @@
   box-shadow: 0 32px 74px rgba(68, 77, 136, 0.2);
 }
 
-
-
 .link-hover-reset:hover {
   color: var(--color-text);
 }
 
 .link-hover-rotate {
-  transition: .4s;
+  transition: 0.4s;
   display: inline-flex;
   will-change: transform;
   transform: rotate(0deg);
@@ -169,9 +157,8 @@
   transform: rotate(-10deg);
 }
 
-
 .isotope-item {
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .gr-bg-opacity {
@@ -187,7 +174,7 @@
   right: 0;
   bottom: 0;
   z-index: -1;
-  opacity: .9;
+  opacity: 0.9;
   border-radius: 8px;
 }
 
@@ -196,9 +183,7 @@
   padding-bottom: 25px !important;
 }
 
-
 .portfolio-card-masonry {
-
   span {
     color: #161c2d;
     font-size: 13px;
@@ -232,7 +217,6 @@
 }
 
 .content-area-grid-1 {
-
   span {
     color: #161c2d;
     font-size: 13px;
@@ -261,7 +245,6 @@
   @include tablet {
     padding: 47px 0px 68px;
   }
-
 }
 
 .portfolio-load-btn {
@@ -309,22 +292,13 @@
   }
 }
 
-
 .portfolio-details-banner {
   // margin-top: 70px;
   padding-bottom: 60px;
 
-
-
   @include tablet {
     padding-bottom: 80px;
   }
-
-  @include desktops {
-    // margin-top: 145px;
-    padding-bottom: 120px;
-  }
-
 
   .portfolio-banner-content {
     padding: 40px 0px;
@@ -352,7 +326,6 @@
       @include desktops {
         font-size: 60px;
       }
-
     }
 
     p {
@@ -365,7 +338,6 @@
       opacity: 0.5;
     }
   }
-
 }
 
 .portfolio-details-banner-card {
@@ -403,7 +375,7 @@
       @include mobile-lg {
         min-width: 25%;
       }
-    
+
       @include tablet {
         min-width: 20%;
       }
@@ -418,7 +390,6 @@
       line-height: 17px;
     }
   }
-
 }
 
 .portfolio--details-section {
@@ -473,7 +444,6 @@
       text-align: center;
       border: 2px solid #262626;
     }
-
   }
 
   a {
@@ -582,10 +552,9 @@
       text-decoration: none;
     }
   }
-
 }
 
-.pt-90{
+.pt-90 {
   padding-top: 45px;
   @include tablet {
     padding-top: 60px;

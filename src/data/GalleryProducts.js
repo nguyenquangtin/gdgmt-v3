@@ -163,6 +163,7 @@ GalleryProducts.Col2_wide = [
 ]
 
 
+
 GalleryProducts.relatedProduct = [
 {
     image:image16,
@@ -185,7 +186,6 @@ GalleryProducts.relatedProduct = [
     title:"Candy Store",
 }
 ]
-
 
 GalleryProducts.masonryDetails = [
     {

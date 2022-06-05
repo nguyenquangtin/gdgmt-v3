@@ -6,7 +6,7 @@ import {
 } from "../sections/portfolio-details/two"
 import FooterSection from "../sections/portfolio-details/Footer"
 import PageWrapper from "../components/PageWrapper"
-export default function PortfolioDetails2() {
+export default function PortfolioDetails() {
   return (
     <PageWrapper innerPageHeader={true}>
       <BannerSection />

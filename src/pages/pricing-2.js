@@ -1,5 +1,5 @@
 import React,{useState} from "react"
-import  Link  from "../components/Link"
+import Link  from "next/link"
 import { FooterSection } from "../sections/InnerPages"
 import PageWrapper from '../components/PageWrapper'
 const Pricing = () => {
@@ -103,7 +103,7 @@ const Pricing = () => {
                         data-placement="top"
                         data-original-title="Save time by using keyboard shortcuts all across SaasLand"
                       >
-                         
+
                         Website nuumber
                       </h5>
                     </div>
@@ -128,8 +128,8 @@ const Pricing = () => {
                         data-placement="top"
                         data-original-title="Save time by using keyboard shortcuts all across SaasLand"
                       >
-                         
-                        Server storger 
+
+                        Server storger
                       </h5>
                     </div>
                     <div className="price_item" data-title="Free">
@@ -153,7 +153,7 @@ const Pricing = () => {
                         data-placement="top"
                         data-original-title="Save time by using keyboard shortcuts all across SaasLand"
                       >
-                        Database 
+                        Database
                       </h5>
                     </div>
                     <div className="price_item" data-title="Free">
@@ -207,8 +207,7 @@ const Pricing = () => {
                         data-placement="top"
                         data-original-title="Save time by using keyboard shortcuts all across SaasLand"
                       >
-                         
-                        SSD disk 
+                        SSD disk
                       </h5>
                     </div>
                     <div className="price_item" data-title="Free">
@@ -236,7 +235,7 @@ const Pricing = () => {
                         data-placement="top"
                         data-original-title="Save time by using keyboard shortcuts all across SaasLand"
                       >
-                         
+
                         VCPUS Fontworld
                       </h5>
                     </div>
@@ -265,7 +264,7 @@ const Pricing = () => {
                         data-placement="top"
                         data-original-title="Save time by using keyboard shortcuts all across SaasLand"
                       >
-                         
+
                         WordPress install
                       </h5>
                     </div>
@@ -294,8 +293,8 @@ const Pricing = () => {
                         data-placement="top"
                         data-original-title="Save time by using keyboard shortcuts all across SaasLand"
                       >
-                         
-                        Server speed 
+
+                        Server speed
                       </h5>
                     </div>
                     <div className="price_item" data-title="Free">
@@ -318,30 +317,30 @@ const Pricing = () => {
                   <div className="pr_list pricing-get-strated-btn">
                     <div className="price_item" />
                     <div className="price_item">
-                       
+
                       <Link  to="#" className="price_btn btn_hover">
-                         
+
                         Get started <i className="fas fa-arrow-right" />
                       </Link>
                     </div>
                     <div className="price_item">
-                       
+
                       <Link  to="#" className="price_btn btn_hover">
-                         
+
                         Get started <i className="fas fa-arrow-right" />
                       </Link>
                     </div>
                     <div className="price_item price-get-started-btn-3">
-                       
+
                       <Link  to="#" className="price_btn btn_hover">
-                         
+
                         Get started <i className="fas fa-arrow-right" />
                       </Link>
                     </div>
                     <div className="price_item">
-                       
+
                       <Link  to="#" className="price_btn btn_hover">
-                         
+
                         Get started <i className="fas fa-arrow-right" />
                       </Link>
                     </div>
