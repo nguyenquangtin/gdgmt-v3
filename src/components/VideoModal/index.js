@@ -6,7 +6,8 @@ const Video = ({id,className,children}) => {
 
   return (
     <React.Fragment>
-      <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={id} onClose={() => setOpen(false)} />
+      {/* TODO Fix the modal video error build */}
+      {/* <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={id} onClose={() => setOpen(false)} /> */}
 
       <button className={`btn-reset${className?" "+className:""}`} onClick={()=> setOpen(true)}>{children}</button>
     </React.Fragment>
