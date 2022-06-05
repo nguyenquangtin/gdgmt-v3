@@ -1,5 +1,5 @@
 import React,{useEffect,useState}  from "react"
-// import Link  from "next/link"
+// import { Link } from "gatsby"
 import Card from "../components/CardTwo"
 import Masonry from "react-masonry-css"
 import data from "../../../../data/GalleryProducts"

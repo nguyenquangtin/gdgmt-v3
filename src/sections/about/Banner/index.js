@@ -1,5 +1,5 @@
 import React from "react"
-import Link  from "next/link"
+import Link from "../../../components/Link"
 export default function BannerSection() {
   return (
     <div className="about-us-banner">
@@ -12,15 +12,19 @@ export default function BannerSection() {
             data-aos-once="true"
           >
             <div className="about-us-banner-content text-center">
-              <h2>Connecting developer community</h2>
+              <h2>We help business to grow their customer base</h2>
               <p>
-                GDG Mientrung plan and host meetup events on a wide
-                range of technical topics.
+                Leverage agile frameworks to provide a robust synopsis for high
+                level overviews. Iterative approaches to corporate strategy
+                foster collaborative thinking.
               </p>
+              <Link to="/contact-us" className="btn focus-reset">
+                Contact Us
+              </Link>
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }

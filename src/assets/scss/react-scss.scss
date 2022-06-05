@@ -578,12 +578,24 @@ body > div{
       }
   }
 
-  .section__heading h2{
+
+    .btn-primary{
+    color: #fff;
+    width: 195px;
+    height: 65px;
+    border-radius: 6px;
+    background-color: #416ff4;
+    margin-top: 35px;
+  }
+
+//   Newly added
+.section__heading h2{
     line-height: 1.2!important;
 }
 
 
-  .featured-line > div{
+
+.featured-line > div{
     position: relative;
     &:after{
         

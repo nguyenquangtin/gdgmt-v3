@@ -50,15 +50,13 @@ Support:        https://uxtheme.net/product-support/
 @import "helpers/theme-media-query"; 
 @import "theme-mode-control/theme-mode-activation";
 @import "bs-theming/bs-theming";
-@import "../../../node_modules/bootstrap/scss/functions";
-@import "../../../node_modules/bootstrap/scss/variables";
-@import "../../../node_modules/bootstrap/scss/mixins";
-@import "bs-theming/bs-theming";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+//Theme Custom Push
+@import "./components/color";
 @import "helpers/variables";
 @import "helpers/functions";
 @import "helpers/mixins";
 
-@import "bs-theming/fonts";
 // @import "components/header";
 // @import "components/menu";
 @import "components/button";

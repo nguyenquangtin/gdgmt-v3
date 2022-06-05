@@ -1,5 +1,5 @@
 import React from "react"
-import Link  from "next/link"
+import Link from "../../../../components/Link"
 const Card = ({ image,date,commentCount,title,text }) => {
   return (
     <div className="blog-item">

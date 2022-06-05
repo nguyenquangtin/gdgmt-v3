@@ -1,5 +1,5 @@
 import React from "react"
-import Link  from "next/link"
+import Link from "../../../components/Link"
 // import BrandLogo from "../../../assets/image/png/logo-white.png"
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

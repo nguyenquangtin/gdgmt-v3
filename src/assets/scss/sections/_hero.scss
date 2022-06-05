@@ -1,5 +1,5 @@
-/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-      Hero Area
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
+      Hero Area 
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
 .bg-position {
@@ -31,7 +31,7 @@
   }
 }
 
-/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
       Landing 1 Hero Area
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
@@ -136,7 +136,7 @@
   }
 }
 
-/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
       Landing 2 Hero Area
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
@@ -399,7 +399,7 @@
   }
 }
 
-/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
       Landing 3 Hero Area
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
@@ -595,7 +595,7 @@
   }
 }
 
-/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
       Landing 4 Hero Area
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
@@ -749,7 +749,7 @@
   }
 }
 
-/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
       Landing 5 Hero Area
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
@@ -869,7 +869,7 @@
   }
 }
 
-/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
       Landing 6 Hero Area
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
@@ -1064,7 +1064,7 @@
   }
 }
 
-/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
       Landing 7 Hero Area
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
@@ -1167,12 +1167,11 @@
   }
 }
 
-/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
       Landing 8 Hero Area
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
 .hero-area-l8 {
-  padding-top: 100px;
   padding-bottom: 60px;
 
   @include tablet {
@@ -1180,7 +1179,7 @@
   }
 
   @include desktops {
-    padding-bottom: 80px;
+    padding-bottom: 0;
   }
 
   &__image {
@@ -1227,11 +1226,7 @@
       font-weight: 700;
       font-style: normal;
       letter-spacing: -1.58px;
-      line-height: 32px;
-
-      span {
-        font-size: 30px;
-      }
+      line-height: 50px;
 
       @include mobile {
         font-size: 44px;
@@ -1272,7 +1267,7 @@
   }
 }
 
-/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
       Landing 9 Hero Area
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
@@ -1520,133 +1515,5 @@
         }
       }
     }
-  }
-}
-/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-      Landing GDG
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-.hero-banner-wrap {
-  position: relative;
-  z-index: 1;
-  padding: 87px 0px 60px 0px;
-
-  @include mobile {
-    padding: 107px 0px 60px 0px;
-  }
-
-  @include mobile-lg {
-    padding: 92px 0px 60px 0px;
-  }
-
-  @include tablet {
-    padding: 140px 0px 80px 0px;
-  }
-
-  @include desktops {
-    padding: 145px 0 0 0;
-  }
-
-  &:after {
-    position: absolute;
-    content: "";
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0.8;
-    z-index: -1;
-  }
-
-  .slider-content {
-    width: 100vw;
-    height: 600px;
-  }
-
-  &__content {
-    margin-top: 45px;
-    @include tablet {
-      padding-right: 80px;
-    }
-
-    @include desktops {
-      margin-top: 0;
-      padding-right: 0px;
-    }
-
-    @include large-desktops {
-      padding-right: 45px;
-    }
-
-    @include extra-large-desktops {
-      padding-right: 134px;
-    }
-  }
-
-  .single-item {
-    height: 600px;
-    position: relative;
-  }
-
-  .slick-dots {
-    position: absolute;
-    bottom: 5px;
-    list-style: none;
-    display: block;
-    text-align: center;
-    padding: 0;
-    width: 100%;
-  }
-  .slick-dots li {
-    border-radius: 100%;
-    position: relative;
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    margin: 0 5px;
-    padding: 0;
-    cursor: pointer;
-  }
-  .slick-dots li button {
-    border: 5px solid #055f5d;
-    border-radius: 100%;
-    display: block;
-    height: 20px;
-    width: 20px;
-    outline: none;
-    line-height: 0;
-    font-size: 0;
-    color: transparent;
-    padding: 5px;
-    cursor: pointer;
-  }
-  .slick-dots li button:hover,
-  .slick-dots li button:focus {
-    outline: none;
-  }
-  .slick-dots li button:hover:before,
-  .slick-dots li button:focus:before {
-    opacity: 1;
-  }
-  .slick-dots li button:before {
-    border-radius: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "•";
-    width: 20px;
-    height: 20px;
-    font-family: "slick";
-    font-size: 6px;
-    line-height: 5px;
-    text-align: center;
-    color: black;
-    opacity: 0.25;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  .slick-dots li.slick-active button:before {
-    color: black;
-    border: 5px solid #869791;
-    border-radius: 100%;
   }
 }

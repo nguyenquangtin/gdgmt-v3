@@ -31,7 +31,7 @@ const CountDown = () => {
 
   useEffect(() => {
     let intervalClean = interval.current;
-    startTimer({yearTrget:"2022",monthTrget:"07",dayTrget:"9"})
+    startTimer({yearTrget:"2021",monthTrget:"08",dayTrget:"31"})
     return () => {
       clearInterval(intervalClean)
     }
@@ -39,7 +39,7 @@ const CountDown = () => {
   return (
     <div className="countdown-item-area d-flex">
       <div className="coutn-item">
-        <h6>Ngày</h6>
+        <h6>Days</h6>
         <div className="counter-number">
           <h1>
             <span id="days">{countDays}</span>
@@ -47,7 +47,7 @@ const CountDown = () => {
         </div>
       </div>
       <div className="coutn-item">
-        <h6>Giờ</h6>
+        <h6>Hours</h6>
         <div className="counter-number">
           <h1>
             <span id="hours">{countHours}</span>
@@ -55,7 +55,7 @@ const CountDown = () => {
         </div>
       </div>
       <div className="coutn-item">
-        <h6>Phút</h6>
+        <h6>Minutes</h6>
         <div className="counter-number">
           <h1>
             <span id="minutes">{countMinutes}</span>
@@ -63,7 +63,7 @@ const CountDown = () => {
         </div>
       </div>
       <div className="coutn-item">
-        <h6>Giây</h6>
+        <h6>Seconds</h6>
         <div className="counter-number">
           <h1>
             <span id="seconds">{countSeconds}</span>

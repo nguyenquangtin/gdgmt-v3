@@ -1,5 +1,5 @@
 import React from "react"
-import Link  from "next/link"
+import Link from "../../../components/Link"
 import TeamCard from "./components/Card"
 import Data from "./data"
 const TeamSection = ({ className }) => {
@@ -18,9 +18,9 @@ const TeamSection = ({ className }) => {
               <div className="section__heading text-center">
                 <h2>Meet our team</h2>
                 <p>
-                  These are the people that make all our awesome events
-                  possible, so we can all have a place to connect with other
-                  developers in our community.
+                  Leverage agile frameworks to provide a robust synopsis for
+                  high level overviews. Iterative approaches to corporate
+                  strategy.
                 </p>
               </div>
             </div>
@@ -41,7 +41,7 @@ const TeamSection = ({ className }) => {
                     image={item.image}
                   />
                 </div>
-              );
+              )
             })}
 
             <div
@@ -63,7 +63,7 @@ const TeamSection = ({ className }) => {
         </div>
       </div>
     </>
-  );
+  )
 }
 
 export default TeamSection

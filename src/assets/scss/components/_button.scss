@@ -63,7 +63,7 @@
 }
 
 .btn--link {
-    color: $primary;
+    color: $primary!important;
     font-size: 13px;
     text-transform: uppercase;
     font-weight: 700;
@@ -73,7 +73,7 @@
     height: 22px;
     padding: 0;
     border-radius: 0;
-    border-bottom: 2px solid $primary;
+    border-bottom: 2px solid $primary !important;
     padding: 0px 0px 15px 0px !important;
     margin-top: 40px;
     &:hover {

@@ -1,5 +1,5 @@
 import React from "react"
-// import Link  from "next/link"
+// import { Link } from "gatsby"
 import Card from "../components/CardTwo"
 import Masonry from "react-masonry-css"
 import data from "../../../../data/GalleryProducts"
@@ -14,12 +14,12 @@ export default function MainContent() {
     576: 1,
   }
 
-
+ 
 
   return (
     <>
       <div className="portfolio-section pt-90" id="portfolio-section">
-
+       
         <div className="container-fluid">
           <div className="row justify-content-center">
             <div className="col-12">
