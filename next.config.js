@@ -48,6 +48,7 @@ module.exports = withFonts(withOptimizedImages({
   sassOptions: {
     includePaths: [path.join(__dirname, 'assets/scss/')],
   },
+  // webpack5: false
 }));
 
 

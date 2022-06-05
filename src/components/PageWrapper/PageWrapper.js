@@ -47,7 +47,7 @@ export default function PageWrapper({
   return (
     <>
     <Head>
-          <title>Sandar</title>
+          <title>Google Developer Group MienTrung </title>
           <link rel="icon" type="image/png" href={favicon} />
     </Head>
       <Loader id="loading" className={visibleLoader ? "" : "inActive"}>
