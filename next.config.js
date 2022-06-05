@@ -31,23 +31,23 @@ const withFonts = require("next-fonts");
 // const withSass = require('@zeit/next-sass');
 const withOptimizedImages = require("next-optimized-images");
 const path = require('path')
-module.exports = withFonts( withOptimizedImages({
-    distDir: 'build',
-    // module: {
-    //     rules: [
-    //         {
-    //             test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/i,
-    //             use: [
-    //                 {
-    //                     loader: 'file-loader',
-    //                 },
-    //             ],
-    //         },
-    //     ],
-    // },
-    sassOptions: {
-        includePaths: [path.join(__dirname, 'assets/scss/')],
-        },
+module.exports = withFonts(withOptimizedImages({
+  distDir: 'build',
+  // module: {
+  //     rules: [
+  //         {
+  //             test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/i,
+  //             use: [
+  //                 {
+  //                     loader: 'file-loader',
+  //                 },
+  //             ],
+  //         },
+  //     ],
+  // },
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'assets/scss/')],
+  },
 }));
 
 
