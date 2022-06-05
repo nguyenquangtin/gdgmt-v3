@@ -48,6 +48,17 @@ module.exports = withFonts(withOptimizedImages({
   sassOptions: {
     includePaths: [path.join(__dirname, 'assets/scss/')],
   },
+  images: {
+    loader: 'akamai',
+    path: '',
+  },
+  images: {
+    domains: [
+      'images.unsplash.com',
+      'notion.so',
+      'www.notion.so'
+    ]
+  }
   // webpack5: false
 }));
 

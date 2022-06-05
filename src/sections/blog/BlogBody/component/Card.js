@@ -1,10 +1,10 @@
 import React from "react"
 import Link from "../../../../components/Link"
-const Card = ({ image,date,commentCount,title,text }) => {
+const Card = ({ image,date,commentCount,title,text, link }) => {
   return (
     <div className="blog-item">
       <div className="blog-img">
-        <Link to="/blog-details" className="d-block">
+        <Link to={link} className="d-block">
           <img className="w-100" src={image} alt="blog" />
         </Link>
       </div>
@@ -14,7 +14,7 @@ const Card = ({ image,date,commentCount,title,text }) => {
             <li>
               <i className="far fa-calendar" />
               <span>
-                <Link to="#">{date}</Link>
+                <Link to={link}>{date}</Link>
               </span>
             </li>
             <li>
@@ -27,7 +27,7 @@ const Card = ({ image,date,commentCount,title,text }) => {
         </div>
         <div className="blog-title">
           <h2>
-            <Link to="/blog-details">
+            <Link to={link}>
               {title}
             </Link>
           </h2>
@@ -38,7 +38,7 @@ const Card = ({ image,date,commentCount,title,text }) => {
           </p>
         </div>
         <div className="continue-text">
-          <Link to="/blog-details">Continue Reading</Link>
+          <Link to={link}>Continue Reading</Link>
         </div>
       </div>
     </div>

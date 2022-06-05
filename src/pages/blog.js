@@ -20,30 +20,7 @@ const Blog = (props) => {
   return (
     <PageWrapper innerPageHeader={true}>
       <BreadCrumbSection />
-
-      <h1>
-        Latest posts
-      </h1>
-      {
-        props.posts.map((result, index) => {
-          return (
-            <div key={index}>
-              <Link href={`/posts/${result.id}`}>
-                <Image src={result.cover.external.url} width={300} height={200} />
-              </Link>
-              <div>
-                <Link href={`/posts/${result.id}`}>
-                  <a>{
-                    result.properties.Name.title[0].plain_text
-                  }</a>
-                </Link>
-              </div>
-            </div>
-          )
-        })
-      }
-
-      <BlogBody />
+      <BlogBody posts={props.posts}/>
     </PageWrapper>
   )
 }
