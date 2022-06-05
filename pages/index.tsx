@@ -9,7 +9,6 @@ export async function getServerSideProps() {
   // Get the posts
   let { results } = await posts();
   // Return the result
-  console.log(results);
   return {
     props: {
       posts: results,
@@ -55,7 +54,7 @@ const Home: NextPage<Props> = (props) => {
       </main>
 
       <footer className={styles.footer}>
-        <p>Blog application</p>
+        <p>GDG Mien Trung</p>
       </footer>
     </div>
   )
