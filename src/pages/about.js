@@ -1,20 +1,11 @@
 import React from "react"
-import {
-  BannerSection,
-  ContentSectionOne,
-  ContentSectionTwo,
-  TeamSection,
-  FooterSection,
-} from "../sections/about"
+import { TeamSection, FooterSection } from "../sections/gdg";
 import PageWrapper from '../components/PageWrapper'
 
 const About = () => {
   return (
     <PageWrapper innerPageHeader={true}>
-      <BannerSection />
-      <ContentSectionOne />
-      <ContentSectionTwo />
-      <TeamSection className="about-us-temam-area" />
+      <TeamSection className="about-us-team-area" />
       <FooterSection />
     </PageWrapper>
   )
