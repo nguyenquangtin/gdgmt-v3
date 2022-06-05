@@ -35,29 +35,29 @@ const nextConfig = {
 //    }
 // }));
 
-const withFonts = require("next-fonts");
-// const withCSS = require('@zeit/next-css');
-// const withSass = require('@zeit/next-sass');
-const withOptimizedImages = require("next-optimized-images");
-const path = require('path')
-module.exports = withFonts(withOptimizedImages({
-  distDir: 'build',
-  // module: {
-  //     rules: [
-  //         {
-  //             test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/i,
-  //             use: [
-  //                 {
-  //                     loader: 'file-loader',
-  //                 },
-  //             ],
-  //         },
-  //     ],
-  // },
-  sassOptions: {
-    includePaths: [path.join(__dirname, 'assets/scss/')],
-  },
-}));
+// const withFonts = require("next-fonts");
+// // const withCSS = require('@zeit/next-css');
+// // const withSass = require('@zeit/next-sass');
+// const withOptimizedImages = require("next-optimized-images");
+// const path = require('path')
+// module.exports = withFonts(withOptimizedImages({
+//   distDir: 'build',
+//   // module: {
+//   //     rules: [
+//   //         {
+//   //             test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/i,
+//   //             use: [
+//   //                 {
+//   //                     loader: 'file-loader',
+//   //                 },
+//   //             ],
+//   //         },
+//   //     ],
+//   // },
+//   sassOptions: {
+//     includePaths: [path.join(__dirname, 'assets/scss/')],
+//   },
+// }));
 
 
 // module.exports = {
@@ -67,4 +67,15 @@ module.exports = withFonts(withOptimizedImages({
 //     },
 //     }
 
-module.exports = nextConfig
+module.exports = {
+  webpack: (nextConfig, { isServer }) => {
+    if (!isServer) {
+      // don't resolve 'fs' module on the client to prevent this error on build --> Error: Can't resolve 'fs'
+      nextConfig.resolve.fallback = {
+        fs: false
+      }
+    }
+
+    return nextConfig;
+  }
+}
