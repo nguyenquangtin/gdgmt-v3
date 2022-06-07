@@ -1,9 +1,23 @@
+import React from "react";
+import {
+  HeroSection,
+  FooterSection,
+} from "../../sections/gdg";
+
+import PageWrapper from "../../components/PageWrapper";
+
 import { GetStaticProps, NextPage, GetStaticPaths } from 'next';
 import Image from 'next/image';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ParsedUrlQuery } from 'querystring';
 import { post, posts, blocks } from '../../lib/notion';
+
+const Header = {
+  headerClasses: "site-header--menu-end site-header--sticky light-header",
+  containerFluid: false,
+  darkLogo: true,
+};
 
 export const getStaticProps = async (ctx) => {
   let { id } = ctx.params;
@@ -44,17 +58,16 @@ const renderBlock = (block) => {
   switch (block.type) {
     case 'heading_1':
       // For a heading
-      return <h1>{block['heading_1'].text[0].plain_text} </h1>
+      return <h1>{block['heading_1'].rich_text[0].plain_text} </h1>
     case 'image':
       // For an image
       return <Image src={block['image'].external.url} width={650} height={400} />
     case 'bulleted_list_item':
       // For an unordered list
-      return <ul><li>{block['bulleted_list_item'].text[0].plain_text} </li></ul >
+      return <ul><li>{block['bulleted_list_item'].rich_text[0].plain_text} </li></ul >
     case 'paragraph':
-      console.log(block)
       // For a paragraph
-      // return <p>{block['paragraph']?.text[0]?.text?.content} </p>
+      return <p>{block['paragraph']?.rich_text[0]?.text?.content} </p>
       return block;
     default:
       // For an extra type
@@ -64,32 +77,24 @@ const renderBlock = (block) => {
 
 const Post = ({ id, post, blocks }) => {
   return (
-    <div className="">
-      <Head>
-        <title>
-          {post.properties.Title.title[0].plain_text}
-        </title>
-      </Head>
-      <div className="">
-        <nav>
-          <Link href="/">
-            <a>Home</a>
-          </Link>
-        </nav>
+    <PageWrapper headerConfig={Header}>
+      <HeroSection />
+        <div className="content">
+        {
+          blocks.map((block, index) => {
+            console.log("block", block);
+            return (
+              <div key={index} className="">
+                {
+                  renderBlock(block)
+                }
+              </div>
+            )
+          })
+        }
       </div>
-      {
-        blocks.map((block, index) => {
-          return (
-            <div key={index} className="">
-              {
-                // renderBlock(block)
-                // block
-              }
-            </div>
-          )
-        })
-      }
-    </div>
+      <FooterSection />
+    </PageWrapper>
   )
 }
 
