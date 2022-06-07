@@ -27,7 +27,10 @@ const data = [
     icon: "fas fa fa-trophy",
     title: "Opportunities",
     text:
-      `<a href="/" title="Become Google Developer experts"> Become Google Developer experts </a> <br /><a href="/" title="Become Google Student Club Leader"> Become Google Student Club Leader </a><br /><a href="/" title="Become WTM Ambassador"> Become WTM Ambassador </a><br /><a href="/" title="Field Trip in Singapore and HCM City.""> Field Trip in Singapore and HCM City. </a>`,
+      `<a href="https://developers.google.com/community/expert" target="_blank" rel="noopener" title="Become Google Developer experts">Become Google Developer experts </a> <br />
+      <a href="https://developers.google.com/community/gdsc" target="_blank" rel="noopener" title="Become Google Student Club Leader"> Become Google Student Club Leader </a><br />
+      <a href="https://developers.google.com/womentechmakers" target="_blank" rel="noopener" title="Become WTM Ambassador"> Become WTM Ambassador </a><br />
+      <a href="/" title="Field Trip in Singapore and HCM City.""> Field Trip in Singapore and HCM City. </a>`,
   },
 ]
 
