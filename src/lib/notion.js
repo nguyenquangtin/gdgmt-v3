@@ -25,7 +25,6 @@ async function blocks(id) {
   return myBlocks;
 }
 
-
 export {
   posts,
   post,

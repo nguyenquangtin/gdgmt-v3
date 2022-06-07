@@ -11,6 +11,10 @@
     "@fortawesome/react-fontawesome": "^0.1.13",
     "@n8tb1t/use-scroll-position": "^2.0.3",
     "@notionhq/client": "^1.0.4",
+    "@prismicio/client": "^6.5.1",
+    "@prismicio/helpers": "^2.3.0",
+    "@prismicio/react": "^2.4.1",
+    "@prismicio/slice-simulator-react": "^0.2.2",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "babel-plugin-styled-components": "^1.12.0",
@@ -45,7 +49,8 @@
     "fs": "^0.0.1-security",
     "imagemin-mozjpeg": "^9.0.0",
     "next-optimized-images": "^2.6.2",
-    "prettier": "2.1.2"
+    "prettier": "2.1.2",
+    "slice-machine-ui": "^0.3.8"
   },
   "keywords": [
     "gatsby"
@@ -55,7 +60,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next build && next export"
+    "export": "next build && next export",
+    "slicemachine": "start-slicemachine"
   },
   "repository": {
     "type": "git",
