@@ -1,51 +1,44 @@
 import React from "react";
-import {
-  HeroSection,
-  FeatureSection,
-  FooterSection,
-  TestimonialSection,
-} from "../sections/gdg";
-import CountDown from "../sections/comingsoon/CountDown"
+import Articles from "../components/articles";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
+import { fetchAPI } from "../lib/api";
 
-import { BannerSection } from "../sections/gdg/Gallery";
-import HomeSponsorBody from "../sections/gdg/Gallery/GalleryBody/home_sponsors";
-import Data from "../data/Sponsors";
-import PageWrapper from "../components/PageWrapper";
-
-const Header = {
-  headerClasses: "site-header--menu-end site-header--sticky light-header",
-  containerFluid: false,
-  darkLogo: true,
-};
-const gdg = () => {
+const Io2022 = ({ articles, categories, homepage }) => {
   return (
-    <PageWrapper headerConfig={Header}>
-
-      <HeroSection />
-
-      <div className="container">
-        <div className="row">
-          <div className="col-xl-6 col-lg-7 col-md-10">
-            <div className="coming-soon-content mt-4">
-              <h2>
-              Ngày hội Công nghệ & Khởi nghiệp Google I/O Extended Mien Trung 2022
-              </h2>
-              <p>
-                Sự kiện sẽ diễn ra tại thành phố Đà Nẵng với sự tham dự của khoảng 500 lập trình viên
-                trong khu vực Đà Nẵng và miền Trung với nhiều chủ đề hấp dẫn về các công nghệ mới nhất
-                từ sự kiện Google I/O 2022 ở Mỹ.
-              </p>
-
-              <CountDown />
-
-            </div>
-          </div>
+    <Layout categories={categories}>
+      <Seo seo={homepage.attributes.seo} />
+      <div className="uk-section">
+        <div className="uk-container uk-container-large">
+          <h1>{homepage.attributes.hero.title}</h1>
+          <Articles articles={articles} />
         </div>
       </div>
-
-      <FooterSection />
-    </PageWrapper>
+    </Layout>
   );
 };
 
-export default gdg;
+export async function getStaticProps() {
+  // Run API calls in parallel
+  const [articlesRes, categoriesRes, homepageRes] = await Promise.all([
+    fetchAPI("/articles", { populate: ["image", "category"] }),
+    fetchAPI("/categories", { populate: "*" }),
+    fetchAPI("/homepage", {
+      populate: {
+        hero: "*",
+        seo: { populate: "*" },
+      },
+    }),
+  ]);
+
+  return {
+    props: {
+      articles: articlesRes.data,
+      categories: categoriesRes.data,
+      homepage: homepageRes.data,
+    },
+    revalidate: 1,
+  };
+}
+
+export default Io2022;
