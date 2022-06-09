@@ -51,9 +51,14 @@ module.exports = withFonts(withOptimizedImages({
 }));
 
 
-// module.exports = {
-//     /* Add Your Scss File Folder Path Here */
-//     sassOptions: {
-//     includePaths: [path.join(__dirname, 'assets/scss/')],
-//     },
-//     }
+module.exports = {
+    /* Add Your Scss File Folder Path Here */
+    // sassOptions: {
+    //   includePaths: [path.join(__dirname, 'assets/scss/')],
+    // },
+    reactStrictMode: true,
+    images: {
+      loader: "default",
+      domains: ["localhost"],
+    },
+}
