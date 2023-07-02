@@ -5,7 +5,7 @@ import thanh from "../../../assets/image/about/team_thanh.png"
 import dung from "../../../assets/image/about/team_dung.jpg"
 import nam from "../../../assets/image/about/team_nam.jpg"
 import nguyen from "../../../assets/image/about/team_nguyen.jpg"
-import truc_thanh from "../../../assets/image/about/team_tructhanh.png"
+import truc_thanh from "../../../assets/image/about/team_tructhanh.jpg"
 
 const Data = [
   {
@@ -38,7 +38,7 @@ const Data = [
       facebook: "",
       linkedin: "https://www.linkedin.com/in/quynh-nguyen-80992790/",
       twitter: "https://twitter.com/quynh_nguyen68",
-      github: "",
+      github: "https://github.com/quynhnguyen68",
     },
   },
   {
@@ -90,8 +90,8 @@ const Data = [
     subtitle: "Event Coordinator",
     image: truc_thanh,
     socials: {
-      facebook: "https://www.facebook.com/celinequachh",
-      linkedin: "",
+      facebook: "",
+      linkedin: "https://www.linkedin.com/in/thanhquach2106/",
       twitter: "",
       github: "",
     },
