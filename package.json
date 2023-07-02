@@ -1,7 +1,7 @@
 {
-  "name": "appex-react-app",
+  "name": "gdg-mientrung-v3",
   "private": true,
-  "description": "A simple next template",
+  "description": "GDG Mientrung Gatsby Website",
   "version": "0.1.0",
   "author": "contact@grayic.com",
   "dependencies": {
@@ -44,7 +44,7 @@
     "fs": "^0.0.1-security",
     "imagemin-mozjpeg": "^9.0.0",
     "next-optimized-images": "^2.6.2",
-    "prettier": "2.1.2"	
+    "prettier": "2.1.2"
   },
   "keywords": [
     "gatsby"
