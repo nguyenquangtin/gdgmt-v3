@@ -12,8 +12,9 @@ const TYPE_GRADIENTS = {
 /**
  * Reusable event hero for GDG event pages.
  * Pass `banner` image OR `type` (devfest|io|wtm|bwa) for a gradient fallback.
+ * Optional: `stats` array [{value, label}] and `topics` array of strings.
  */
-const EventHero = ({ banner, type, title, date, location, description, registerUrl, isPast }) => {
+const EventHero = ({ banner, type, title, date, location, description, registerUrl, isPast, stats, topics }) => {
   const gradient = TYPE_GRADIENTS[type] || TYPE_GRADIENTS.default
 
   return (
@@ -88,15 +89,48 @@ const EventHero = ({ banner, type, title, date, location, description, registerU
             </p>
           )}
 
+          {/* Stats row */}
+          {stats && stats.length > 0 && (
+            <div
+              className="gdg-event-stats"
+              data-aos="fade-up"
+              data-aos-duration={700}
+              data-aos-delay={180}
+              data-aos-once="true"
+            >
+              {stats.map((s, i) => (
+                <div className="gdg-event-stat" key={i}>
+                  <div className="gdg-event-stat__value">{s.value}</div>
+                  <div className="gdg-event-stat__label">{s.label}</div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Topic tags */}
+          {topics && topics.length > 0 && (
+            <div
+              className="gdg-event-topics"
+              data-aos="fade-up"
+              data-aos-duration={700}
+              data-aos-delay={220}
+              data-aos-once="true"
+            >
+              {topics.map((t, i) => (
+                <span className="gdg-event-topic" key={i}>{t}</span>
+              ))}
+            </div>
+          )}
+
           {registerUrl && !isPast && (
             <a
               href={registerUrl}
-              className="gdg-btn gdg-btn--primary mt-3"
+              className="gdg-btn gdg-btn--primary mt-4 d-inline-block"
               target="_blank"
               rel="noopener noreferrer"
               data-aos="fade-up"
               data-aos-duration={700}
-              data-aos-delay={200}
+              data-aos-delay={260}
               data-aos-once="true"
             >
               Register Now

@@ -9,6 +9,11 @@ const Header = {
   darkLogo: true,
 };
 
+const topics = [
+  "Gemini 2.0", "Generative AI", "Google AI Studio",
+  "Vertex AI", "Hands-on Codelabs", "Prompt Engineering",
+];
+
 const BWA2025Page = () => (
   <PageWrapper headerConfig={Header}>
     <EventHero
@@ -16,8 +21,9 @@ const BWA2025Page = () => (
       title="Build With AI 2025 — Exploring the Future with Gemini 2.0 & Generative AI"
       date="19 tháng 4, 2025 · Đà Nẵng"
       location="Đà Nẵng, Việt Nam"
-      description="Build With AI 2025 — chuỗi workshop chuyên sâu về các công nghệ AI mới nhất của Google, bao gồm Gemini 2.0 và Generative AI. Sự kiện được tổ chức bởi GDG MienTrung và GDG on Campus, mang đến trải nghiệm thực hành cho cộng đồng lập trình viên miền Trung."
+      description="Build With AI 2025 — workshop chuyên sâu về Gemini 2.0 và Generative AI, được tổ chức bởi GDG MienTrung phối hợp cùng GDG on Campus. Học viên được thực hành trực tiếp với Google AI Studio, Vertex AI và các công cụ AI tiên tiến nhất của Google."
       isPast={true}
+      topics={topics}
     />
     <FooterSection />
   </PageWrapper>

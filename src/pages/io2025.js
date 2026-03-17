@@ -9,6 +9,15 @@ const Header = {
   darkLogo: true,
 };
 
+const stats = [
+  { value: "500+", label: "Attendees" },
+];
+
+const topics = [
+  "Google AI / Gemini", "Android", "Google Cloud",
+  "Flutter", "Web Technologies", "Firebase",
+];
+
 const IO2025Page = () => (
   <PageWrapper headerConfig={Header}>
     <EventHero
@@ -16,9 +25,11 @@ const IO2025Page = () => (
       title="Google I/O Extended MienTrung 2025"
       date="12 tháng 7, 2025 · Đà Nẵng"
       location="Đà Nẵng, Việt Nam"
-      description="Google I/O Extended MienTrung 2025 — sự kiện dành cho 500+ lập trình viên với các workshop thực hành, diễn giả chuyên gia, và cơ hội networking. Cập nhật mọi công nghệ mới nhất từ Google I/O 2025."
+      description="Google I/O Extended MienTrung 2025 — sự kiện dành cho 500+ lập trình viên với các workshop thực hành, diễn giả chuyên gia, và cơ hội networking. Cập nhật mọi công nghệ mới nhất từ Google I/O 2025, bao gồm Gemini, Android, Cloud và Flutter."
       registerUrl="https://gdgmientrung-io25.vercel.app/"
       isPast={true}
+      stats={stats}
+      topics={topics}
     />
     <FooterSection />
   </PageWrapper>

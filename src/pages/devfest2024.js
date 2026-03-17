@@ -9,6 +9,11 @@ const Header = {
   darkLogo: true,
 };
 
+const topics = [
+  "Google AI / Gemini", "Android", "Google Cloud",
+  "Flutter", "Firebase", "Web Technologies",
+];
+
 const DevFest2024Page = () => (
   <PageWrapper headerConfig={Header}>
     <EventHero
@@ -16,8 +21,9 @@ const DevFest2024Page = () => (
       title="GDG DevFest MienTrung 2024"
       date="14 tháng 12, 2024 · Đà Nẵng"
       location="Đà Nẵng, Việt Nam"
-      description="GDG DevFest MienTrung 2024 — sự kiện công nghệ thường niên lớn nhất trong năm của cộng đồng lập trình viên miền Trung, quy tụ các chuyên gia và kỹ sư Google để chia sẻ những xu hướng công nghệ mới nhất."
+      description="GDG DevFest MienTrung 2024 — sự kiện công nghệ thường niên lớn nhất trong năm của cộng đồng lập trình viên miền Trung. Sự kiện hội tụ các chuyên gia Google, Google Developer Experts và kỹ sư hàng đầu để chia sẻ xu hướng mới nhất về AI, Cloud, Android và Web."
       isPast={true}
+      topics={topics}
     />
     <FooterSection />
   </PageWrapper>
