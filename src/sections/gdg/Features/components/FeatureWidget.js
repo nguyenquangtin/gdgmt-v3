@@ -1,22 +1,22 @@
 import React from "react"
 
-const Widget = ({ icon, title, text }) => {
+// Google brand accent colors cycling per card
+const ACCENTS = ["#4285F4", "#EA4335", "#FBBC05", "#34A853", "#4285F4"]
+
+const Widget = ({ icon, title, text, index }) => {
+  const accent = ACCENTS[index % ACCENTS.length]
+
   return (
-    <>
-      <div className="widget widget--feature-l8-1">
-        <div className="d-flex align-items-center">
-          <div className="widget--feature-l8-1__icon">
-            <i className={icon} />
-          </div>
-          <div className="widget--feature-l8-1__head">
-            <h4>{title}</h4>
-          </div>
-        </div>
-        <div className="widget--feature-l8-1__content">
-          <p dangerouslySetInnerHTML={{__html: text}} />
-        </div>
+    <div className="gdg-feature-card" style={{ "--gdg-accent": accent }}>
+      <div className="gdg-feature-card__icon">
+        <i className={icon} aria-hidden="true" />
       </div>
-    </>
+      <h4 className="gdg-feature-card__title">{title}</h4>
+      <p
+        className="gdg-feature-card__text"
+        dangerouslySetInnerHTML={{ __html: text }}
+      />
+    </div>
   )
 }
 

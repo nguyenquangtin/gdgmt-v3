@@ -2,8 +2,6 @@ import van from "../../../assets/image/about/team_van.jpg"
 import nhina from "../../../assets/image/about/team_nhina.jpg"
 import quynh from "../../../assets/image/about/team_quynh.jpg"
 import thanh from "../../../assets/image/about/team_thanh.png"
-import dung from "../../../assets/image/about/team_dung.jpg"
-import nam from "../../../assets/image/about/team_nam.jpg"
 import nguyen from "../../../assets/image/about/team_nguyen.jpg"
 import truc_thanh from "../../../assets/image/about/team_tructhanh.jpg"
 
@@ -50,28 +48,6 @@ const Data = [
       linkedin: "https://www.linkedin.com/in/su-minh-thanh-6427b1161/",
       twitter: "https://twitter.com/smthanh",
       github: "https://github.com/suminhthanh",
-    },
-  },
-  {
-    title: "Dung Le",
-    subtitle: "Partner Manager",
-    image: dung,
-    socials: {
-      facebook: "https://www.facebook.com/hana.le.524",
-      linkedin: "",
-      twitter: "",
-      github: "",
-    },
-  },
-  {
-    title: "Nam Hoang",
-    subtitle: "Logistic Manager",
-    image: nam,
-    socials: {
-      facebook: "https://www.facebook.com/hoang.giangnam.92",
-      linkedin: "",
-      twitter: "",
-      github: "",
     },
   },
   {

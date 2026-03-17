@@ -342,3 +342,29 @@
     }
   }
 }
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+      Former Members
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+.gdg-ex-members {
+  // Slightly muted to visually separate from active team
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  // Grayscale on team card images, restore on hover
+  .about-team-card {
+    img {
+      filter: grayscale(40%);
+      transition: filter 0.25s ease;
+    }
+
+    &:hover img {
+      filter: grayscale(0%);
+    }
+  }
+}

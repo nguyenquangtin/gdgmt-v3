@@ -1674,3 +1674,102 @@
     cursor: pointer;
   }
 }
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+      GDG 2026 Features Section
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+.gdg-features {
+  padding: 80px 0;
+  background: #fff;
+
+  @include tablet {
+    padding: 100px 0;
+  }
+}
+
+.gdg-features__heading {
+  max-width: 600px;
+  margin: 0 auto 56px;
+}
+
+.gdg-features__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #0d152e;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+
+  @include tablet {
+    font-size: 44px;
+  }
+}
+
+.gdg-features__subtitle {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #555e7d;
+}
+
+.gdg-features__grid {
+  gap: 24px 0;
+}
+
+// Glassmorphism feature card with colored left accent
+.gdg-feature-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px 28px 28px 32px;
+  border: 1px solid #eef0f7;
+  border-left: 4px solid var(--gdg-accent, #4285F4);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  cursor: default;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.gdg-feature-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--gdg-accent, #4285F4) 12%, white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+
+  i {
+    font-size: 20px;
+    color: var(--gdg-accent, #4285F4);
+  }
+}
+
+.gdg-feature-card__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0d152e;
+  margin-bottom: 10px;
+}
+
+.gdg-feature-card__text {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #555e7d;
+  margin: 0;
+
+  a {
+    color: var(--gdg-accent, #4285F4);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

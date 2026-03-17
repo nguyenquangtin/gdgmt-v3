@@ -3,6 +3,7 @@ import Link from "../../../components/Link";
 import TeamCard from "./components/Card"
 import Data from "./data"
 import Advisory from './advisory'
+import ExMembers from './ex-members'
 
 const TeamSection = ({ className }) => {
   return (
@@ -66,7 +67,7 @@ const TeamSection = ({ className }) => {
             </div>
           </div>
           <div className="row justify-content-center about-team-item mt-4">
-          {Advisory.map((item, index) => {
+            {Advisory.map((item, index) => {
               return (
                 <div
                   className="col-lg-3 col-sm-6 col-10"
@@ -85,7 +86,7 @@ const TeamSection = ({ className }) => {
               );
             })}
 
-          <div
+            <div
               className="col-lg-3 col-sm-6 col-10"
               data-aos="fade-up"
               data-aos-duration={800}
@@ -101,8 +102,48 @@ const TeamSection = ({ className }) => {
               </div>
             </div>
           </div>
-
         </div>
+
+        {/* Former Members */}
+        <div className="container mt-5">
+          <div className="row justify-content-center">
+            <div
+              className="col-xl-6 col-lg-8 col-md-10"
+              data-aos="fade-in"
+              data-aos-duration={800}
+              data-aos-once="true"
+            >
+              <div className="section__heading text-center">
+                <h2>Former Members</h2>
+                <p>
+                  We are grateful for the dedication and contributions of our
+                  past team members who helped shape our community.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="row justify-content-center about-team-item mt-4 gdg-ex-members">
+            {ExMembers.map((item, index) => {
+              return (
+                <div
+                  className="col-lg-3 col-sm-6 col-10"
+                  data-aos="fade-up"
+                  data-aos-duration={800}
+                  data-aos-once="true"
+                  key={index}
+                >
+                  <TeamCard
+                    title={item.title}
+                    subtitle={item.subtitle}
+                    image={item.image}
+                    socials={item.socials}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
       </div>
     </>
   );

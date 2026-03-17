@@ -1,4 +1,308 @@
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+      GDG 2026 Hero Area
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+.gdg-hero {
+  position: relative;
+  overflow: hidden;
+  background: #f8f9ff;
+  padding-top: 90px;
+  padding-bottom: 60px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  @include tablet {
+    padding-top: 110px;
+    padding-bottom: 80px;
+  }
+
+  @include desktops {
+    padding-top: 120px;
+    padding-bottom: 100px;
+    min-height: 90vh;
+  }
+}
+
+// Aurora animated blobs
+.gdg-hero__aurora {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.gdg-hero__blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.25;
+  animation: gdg-blob-drift 10s ease-in-out infinite alternate;
+
+  &--blue {
+    background: $gdg-blue;
+    width: 520px;
+    height: 520px;
+    top: -120px;
+    left: -100px;
+    animation-duration: 11s;
+  }
+
+  &--red {
+    background: $gdg-red;
+    width: 380px;
+    height: 380px;
+    top: 30%;
+    right: -80px;
+    animation-duration: 13s;
+    animation-delay: -3s;
+  }
+
+  &--yellow {
+    background: $gdg-yellow;
+    width: 300px;
+    height: 300px;
+    bottom: -60px;
+    left: 25%;
+    animation-duration: 9s;
+    animation-delay: -6s;
+  }
+
+  &--green {
+    background: $gdg-green;
+    width: 260px;
+    height: 260px;
+    bottom: 10%;
+    right: 20%;
+    animation-duration: 12s;
+    animation-delay: -2s;
+  }
+}
+
+@keyframes gdg-blob-drift {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(20px, -20px) scale(1.08); }
+  100% { transform: translate(-15px, 15px) scale(0.95); }
+}
+
+// Respect reduced motion
+@media (prefers-reduced-motion: reduce) {
+  .gdg-hero__blob { animation: none; }
+}
+
+.gdg-hero__row {
+  position: relative;
+  z-index: 1;
+  min-height: 60vh;
+
+  @include desktops {
+    gap: 0;
+  }
+}
+
+// Badge with Google dots
+.gdg-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 100px;
+  padding: 6px 16px 6px 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.gdg-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+
+  &--blue   { background: $gdg-blue; }
+  &--red    { background: $gdg-red; }
+  &--yellow { background: $gdg-yellow; }
+  &--green  { background: $gdg-green; }
+}
+
+// Hero Title
+.gdg-hero__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #0d152e;
+  margin-bottom: 20px;
+  letter-spacing: -1.5px;
+
+  @include mobile {
+    font-size: 54px;
+  }
+
+  @include tablet {
+    font-size: 64px;
+  }
+
+  @include desktops {
+    font-size: 72px;
+  }
+}
+
+.gdg-hero__title-accent {
+  background: linear-gradient(135deg, $gdg-blue 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gdg-hero__subtitle {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555e7d;
+  max-width: 480px;
+  margin-bottom: 36px;
+}
+
+// CTA buttons
+.gdg-hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.gdg-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+
+  &--primary {
+    background: $gdg-blue;
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(66, 133, 244, 0.35);
+
+    &:hover {
+      background: darken($gdg-blue, 8%);
+      color: #fff;
+      box-shadow: 0 12px 28px rgba(66, 133, 244, 0.45);
+    }
+  }
+
+  &--outline {
+    background: rgba(255,255,255,0.8);
+    color: $gdg-blue;
+    border: 1.5px solid $gdg-blue;
+    backdrop-filter: blur(8px);
+
+    &:hover {
+      background: $gdg-blue;
+      color: #fff;
+    }
+  }
+}
+
+// Event card (glassmorphism)
+.gdg-hero__event-col {
+  margin-top: 48px;
+
+  @include desktops {
+    margin-top: 0;
+    padding-left: 40px;
+  }
+}
+
+.gdg-event-card {
+  display: block;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255,255,255,0.8) inset;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.14);
+    text-decoration: none;
+  }
+}
+
+.gdg-event-card__img-wrap {
+  position: relative;
+  overflow: hidden;
+  max-height: 280px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .gdg-event-card:hover & img {
+    transform: scale(1.03);
+  }
+}
+
+.gdg-event-card__badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: $gdg-red;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+
+.gdg-event-card__body {
+  padding: 20px 24px 24px;
+}
+
+.gdg-event-card__desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555e7d;
+  margin-bottom: 16px;
+}
+
+.gdg-event-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: $gdg-blue;
+  transition: gap 0.2s ease;
+
+  .gdg-event-card:hover & {
+    gap: 10px;
+  }
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
       Hero Area
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
