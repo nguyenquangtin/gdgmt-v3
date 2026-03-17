@@ -20,8 +20,8 @@ const WTM2023Page = () => (
       type="wtm"
       title="WomenTechmakers — GDG MienTrung 2023"
       date="25 tháng 3, 2023 · Đà Nẵng"
-      location="Đà Nẵng, Việt Nam"
-      description="Sự kiện WomenTechmakers 2023 do GDG MienTrung tổ chức nhân Ngày Quốc tế Phụ nữ, kết hợp career fair, networking và các buổi chia sẻ chuyên sâu về phát triển nghề nghiệp trong lĩnh vực công nghệ. Một không gian đặc biệt dành riêng cho phụ nữ đam mê công nghệ ở miền Trung."
+      location="Swinburne Vietnam, Đà Nẵng"
+      description="WomenTechmakers 2023 do GDG MienTrung tổ chức tại Swinburne Vietnam nhân Ngày Quốc tế Phụ nữ, kết hợp career fair, networking và các buổi chia sẻ chuyên sâu về phát triển nghề nghiệp trong lĩnh vực công nghệ. Một không gian đặc biệt dành riêng cho phụ nữ đam mê công nghệ ở miền Trung."
       registerUrl="https://gdg.community.dev/events/details/google-gdg-mientrung-presents-womentechmaker-gdg-mientrung-2023/"
       isPast={true}
       topics={topics}

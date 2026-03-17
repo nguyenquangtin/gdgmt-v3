@@ -20,7 +20,7 @@ const BWA2025Page = () => (
       type="bwa"
       title="Build With AI 2025 — Exploring the Future with Gemini 2.0 & Generative AI"
       date="19 tháng 4, 2025 · Đà Nẵng"
-      location="Đà Nẵng, Việt Nam"
+      location="Da Nang Software Park #2, Hải Châu, Đà Nẵng"
       description="Build With AI 2025 — workshop chuyên sâu về Gemini 2.0 và Generative AI, được tổ chức bởi GDG MienTrung phối hợp cùng GDG on Campus. Học viên được thực hành trực tiếp với Google AI Studio, Vertex AI và các công cụ AI tiên tiến nhất của Google."
       isPast={true}
       topics={topics}

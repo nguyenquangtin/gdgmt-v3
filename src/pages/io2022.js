@@ -13,6 +13,15 @@ const Header = {
   darkLogo: true,
 };
 
+const stats = [
+  { value: "700+", label: "Attendees" },
+];
+
+const topics = [
+  "Android", "Flutter", "Google Cloud",
+  "Web Technologies", "Firebase", "Startup Tech",
+];
+
 const IO2022Page = () => {
   return (
     <PageWrapper headerConfig={Header}>
@@ -21,10 +30,10 @@ const IO2022Page = () => {
         title="Ngày hội Công nghệ & Khởi nghiệp Google I/O Extended Mien Trung 2022"
         date="2022 · Đà Nẵng"
         location="Đà Nẵng, Việt Nam"
-        description="Sự kiện diễn ra tại thành phố Đà Nẵng với sự tham dự của khoảng 500 lập trình viên
-          trong khu vực Đà Nẵng và miền Trung với nhiều chủ đề hấp dẫn về các công nghệ mới nhất
-          từ sự kiện Google I/O 2022 ở Mỹ."
+        description="Sự kiện diễn ra tại Đà Nẵng với sự tham dự của hơn 700 lập trình viên khu vực miền Trung. Nhiều chủ đề hấp dẫn về các công nghệ mới nhất từ Google I/O 2022, bao gồm Android, Flutter, Cloud và Web."
         isPast={true}
+        stats={stats}
+        topics={topics}
       />
 
       <BannerSection

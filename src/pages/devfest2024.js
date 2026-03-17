@@ -9,20 +9,25 @@ const Header = {
   darkLogo: true,
 };
 
+const stats = [
+  { value: "200+", label: "Attendees" },
+];
+
 const topics = [
-  "Google AI / Gemini", "Android", "Google Cloud",
-  "Flutter", "Firebase", "Web Technologies",
+  "AI Trends", "Chatbot Development", "Tech Integration",
+  "Google Cloud", "Flutter", "Firebase",
 ];
 
 const DevFest2024Page = () => (
   <PageWrapper headerConfig={Header}>
     <EventHero
       type="devfest"
-      title="GDG DevFest MienTrung 2024"
+      title='GDG DevFest MienTrung 2024 — "Catch Me If You Can"'
       date="14 tháng 12, 2024 · Đà Nẵng"
-      location="Đà Nẵng, Việt Nam"
-      description="GDG DevFest MienTrung 2024 — sự kiện công nghệ thường niên lớn nhất trong năm của cộng đồng lập trình viên miền Trung. Sự kiện hội tụ các chuyên gia Google, Google Developer Experts và kỹ sư hàng đầu để chia sẻ xu hướng mới nhất về AI, Cloud, Android và Web."
+      location="Grand Tourane Hotel, Đà Nẵng"
+      description='GDG DevFest MienTrung 2024 với chủ đề "Catch Me If You Can" — sự kiện thường niên lớn nhất cuối năm của cộng đồng developer miền Trung, tổ chức tại Grand Tourane Hotel. Hơn 200 lập trình viên tham gia các track thực hành chuyên sâu về AI trends, xây dựng chatbot và tích hợp công nghệ mới nhất của Google.'
       isPast={true}
+      stats={stats}
       topics={topics}
     />
     <FooterSection />
