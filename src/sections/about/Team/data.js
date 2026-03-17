@@ -5,6 +5,7 @@ import member4 from "../../../assets/image/about/team-4.png"
 import member5 from "../../../assets/image/about/team-5.png"
 import member6 from "../../../assets/image/about/team-6.png"
 import member7 from "../../../assets/image/about/team-7.png"
+import memberLong from "../../../assets/image/about/team-long-nguyen.png"
 const Data = [
   {
     title: "Mehedi Bodda",
@@ -40,6 +41,12 @@ const Data = [
     title: "Tanim Thorpe",
     subtitle: "Design Intern",
     image: member7,
+  },
+  {
+    title: "Long Nguyễn",
+    subtitle: "Graphic Designer",
+    image: memberLong,
+    facebook: "https://www.facebook.com/tit.tit.858269/",
   },
 ]
 

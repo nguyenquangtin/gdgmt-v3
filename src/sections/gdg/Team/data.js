@@ -3,7 +3,7 @@ import nhina from "../../../assets/image/about/team_nhina.jpg"
 import quynh from "../../../assets/image/about/team_quynh.jpg"
 import thanh from "../../../assets/image/about/team_thanh.png"
 import nguyen from "../../../assets/image/about/team_nguyen.jpg"
-import truc_thanh from "../../../assets/image/about/team_tructhanh.jpg"
+import vi from "../../../assets/image/about/team_vi.png"
 
 const Data = [
   {
@@ -62,12 +62,12 @@ const Data = [
     },
   },
   {
-    title: "Thanh Quach",
-    subtitle: "Event Coordinator",
-    image: truc_thanh,
+    title: "Tường Vi",
+    subtitle: "Marketing Executive",
+    image: vi,
     socials: {
-      facebook: "",
-      linkedin: "https://www.linkedin.com/in/thanhquach2106/",
+      facebook: "https://www.facebook.com/vingo1601",
+      linkedin: "",
       twitter: "",
       github: "",
     },

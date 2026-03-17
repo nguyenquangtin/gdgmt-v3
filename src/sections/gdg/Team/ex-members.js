@@ -1,5 +1,6 @@
 import dung from "../../../assets/image/about/team_dung.jpg"
 import nam from "../../../assets/image/about/team_nam.jpg"
+import truc_thanh from "../../../assets/image/about/team_tructhanh.jpg"
 
 const ExMembers = [
   {
@@ -20,6 +21,17 @@ const ExMembers = [
     socials: {
       facebook: "https://www.facebook.com/hoang.giangnam.92",
       linkedin: "",
+      twitter: "",
+      github: "",
+    },
+  },
+  {
+    title: "Thanh Quach",
+    subtitle: "Event Coordinator",
+    image: truc_thanh,
+    socials: {
+      facebook: "",
+      linkedin: "https://www.linkedin.com/in/thanhquach2106/",
       twitter: "",
       github: "",
     },

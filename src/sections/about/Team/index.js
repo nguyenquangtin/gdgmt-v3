@@ -39,6 +39,7 @@ const TeamSection = ({ className }) => {
                     title={item.title}
                     subtitle={item.subtitle}
                     image={item.image}
+                    facebook={item.facebook}
                   />
                 </div>
               )
