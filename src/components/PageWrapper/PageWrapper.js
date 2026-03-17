@@ -1,15 +1,43 @@
 import React from "react"
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Head from "next/head";
 import Header from "../Header"
 import Link  from "../Link";
 import favicon from '../../assets/image/favicon.png'
-import Preloader from '../../assets/image/preloader.gif'
+
 const innerHeader = {
   headerClasses: "site-header--menu-center light-header position-relative inner-page-header",
   containerFluid: true,
   darkLogo:true
 }
+
+const spin = keyframes`
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+`;
+
+// Google-colored spinner segments using conic-gradient
+const Spinner = styled.div`
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #4285F4 0deg 90deg,
+    #EA4335 90deg 180deg,
+    #FBBC04 180deg 270deg,
+    #34A853 270deg 360deg
+  );
+  animation: ${spin} 0.9s linear infinite;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border-radius: 50%;
+    background: #fff;
+  }
+`;
+
 const Loader = styled.div`
   position: fixed;
   top: 0;
@@ -21,10 +49,9 @@ const Loader = styled.div`
   opacity: 1;
   visibility: visible;
   transition: all 1.5s linear;
-  transition: all 1.5s linear;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &.inActive {
     opacity: 0;
     visibility: hidden;
@@ -51,7 +78,7 @@ export default function PageWrapper({
           <link rel="icon" type="image/png" href={favicon} />
     </Head>
       <Loader id="loading" className={visibleLoader ? "" : "inActive"}>
-          <img src={Preloader} alt="loader" className={visibleLoader ? "d-block" : "d-none"}/>
+        <Spinner />
       </Loader>
       <div className={`site-wrapper ${visibleLoader ?  "" : "show"}`}>
       <Header
