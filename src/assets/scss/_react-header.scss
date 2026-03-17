@@ -96,7 +96,7 @@
             visibility: visible;
             opacity: 1;
             z-index: 99;
-            pointer-events: visible;
+            pointer-events: auto;
             border-radius: 0px 0px 15px 15px;
             border-top: 3px solid #fbb040;
             display: block !important;
@@ -141,7 +141,7 @@
                 visibility: visible;
                 opacity: 1;
                 z-index: 99;
-                pointer-events: visible;
+                pointer-events: auto;
                 border-radius: 0px 0px 15px 15px;
                 border-top: 3px solid #fbb040;
               }
@@ -213,7 +213,7 @@
                 visibility: visible;
                 opacity: 1;
                 z-index: 99;
-                pointer-events: visible;
+                pointer-events: auto;
                 border-radius: 0px 0px 15px 15px;
                 border-top: 3px solid #fbb040;
               }
@@ -236,10 +236,15 @@
           > .dropdown-menu {
             min-width: 100%;
             max-width: 100%;
-            transform: translate(0);
+            // Reset any Popper.js transform that can push the dropdown off-screen
+            transform: none !important;
             @media (min-width: 992px) {
               padding: 30px;
-              pointer-events:none;
+              pointer-events: none;
+              // Anchor to full navbar width — prevents right-edge overflow
+              left: 0 !important;
+              right: 0 !important;
+              width: 100%;
             }
             .row {
               @media (max-width: 992px) {
@@ -259,7 +264,7 @@
             .dropdown-menu {
              @include desktops{
               top: 90%;
-              pointer-events: visible;
+              pointer-events: auto;
              }
             }
           }
