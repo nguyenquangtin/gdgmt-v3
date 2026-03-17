@@ -2,6 +2,7 @@ import React from "react";
 import { FooterSection } from "../sections/gdg";
 import EventHero from "../sections/gdg/EventHero";
 import PageWrapper from "../components/PageWrapper";
+import banner from "../assets/image/banners/io2023.jpg";
 
 const Header = {
   headerClasses: "site-header--menu-end site-header--sticky light-header",
@@ -24,6 +25,7 @@ const topics = [
 const IO2023Page = () => (
   <PageWrapper headerConfig={Header}>
     <EventHero
+      banner={banner}
       type="io"
       title='Google I/O Extended MienTrung 2023 — "Spin2Win"'
       date="22 tháng 7, 2023 · Đà Nẵng"

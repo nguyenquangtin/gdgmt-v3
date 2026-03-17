@@ -2,6 +2,7 @@ import React from "react";
 import { FooterSection } from "../sections/gdg";
 import EventHero from "../sections/gdg/EventHero";
 import PageWrapper from "../components/PageWrapper";
+import banner from "../assets/image/banners/devfest2024.jpg";
 
 const Header = {
   headerClasses: "site-header--menu-end site-header--sticky light-header",
@@ -21,6 +22,7 @@ const topics = [
 const DevFest2024Page = () => (
   <PageWrapper headerConfig={Header}>
     <EventHero
+      banner={banner}
       type="devfest"
       title='GDG DevFest MienTrung 2024 — "Catch Me If You Can"'
       date="14 tháng 12, 2024 · Đà Nẵng"

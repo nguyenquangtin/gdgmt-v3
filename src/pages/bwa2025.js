@@ -2,6 +2,7 @@ import React from "react";
 import { FooterSection } from "../sections/gdg";
 import EventHero from "../sections/gdg/EventHero";
 import PageWrapper from "../components/PageWrapper";
+import banner from "../assets/image/banners/bwa2025.png";
 
 const Header = {
   headerClasses: "site-header--menu-end site-header--sticky light-header",
@@ -17,6 +18,7 @@ const topics = [
 const BWA2025Page = () => (
   <PageWrapper headerConfig={Header}>
     <EventHero
+      banner={banner}
       type="bwa"
       title="Build With AI 2025 — Exploring the Future with Gemini 2.0 & Generative AI"
       date="19 tháng 4, 2025 · Đà Nẵng"

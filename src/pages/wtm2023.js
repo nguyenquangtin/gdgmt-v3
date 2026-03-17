@@ -2,6 +2,7 @@ import React from "react";
 import { FooterSection } from "../sections/gdg";
 import EventHero from "../sections/gdg/EventHero";
 import PageWrapper from "../components/PageWrapper";
+import banner from "../assets/image/banners/wtm2023.jpg";
 
 const Header = {
   headerClasses: "site-header--menu-end site-header--sticky light-header",
@@ -17,6 +18,7 @@ const topics = [
 const WTM2023Page = () => (
   <PageWrapper headerConfig={Header}>
     <EventHero
+      banner={banner}
       type="wtm"
       title="WomenTechmakers — GDG MienTrung 2023"
       date="25 tháng 3, 2023 · Đà Nẵng"

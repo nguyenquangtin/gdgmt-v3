@@ -2,6 +2,7 @@ import React from "react";
 import { FooterSection } from "../sections/gdg";
 import EventHero from "../sections/gdg/EventHero";
 import PageWrapper from "../components/PageWrapper";
+import banner from "../assets/image/banners/devfest2021.png";
 
 const Header = {
   headerClasses: "site-header--menu-end site-header--sticky light-header",
@@ -24,6 +25,7 @@ const topics = [
 const DevFest2021Page = () => (
   <PageWrapper headerConfig={Header}>
     <EventHero
+      banner={banner}
       type="devfest"
       title="GDG DevFest MienTrung 2021"
       date="2021 · Đà Nẵng"

@@ -2,6 +2,7 @@ import React from "react";
 import { FooterSection } from "../sections/gdg";
 import EventHero from "../sections/gdg/EventHero";
 import PageWrapper from "../components/PageWrapper";
+import banner from "../assets/image/banners/io2024.jpg";
 
 const Header = {
   headerClasses: "site-header--menu-end site-header--sticky light-header",
@@ -23,6 +24,7 @@ const topics = [
 const IO2024Page = () => (
   <PageWrapper headerConfig={Header}>
     <EventHero
+      banner={banner}
       type="io"
       title="Google I/O Extended MienTrung 2024"
       date="6–7 tháng 7, 2024 · Swinburne Vietnam, Đà Nẵng"
