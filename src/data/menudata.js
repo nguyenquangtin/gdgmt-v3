@@ -95,38 +95,39 @@ export const menuItems = [
           col: 12,
           items: {
             col_1: {
-              title: "Google IO Extended",
+              title: "Google I/O Extended",
               items: [
-                { name: "io2022", label: "IO 2022" },
-                { name: "", label: "IO 2019" },
+                { name: "io2025", label: "I/O Extended 2025" },
+                { name: "io2024", label: "I/O Extended 2024" },
+                { name: "io2023", label: "I/O Extended 2023" },
+                { name: "io2022", label: "I/O Extended 2022" },
+                { name: "https://gdg.community.dev/events/details/google-gdg-mientrung-presents-google-io-extended-in-vietnam/", label: "I/O Extended 2021", isExternal: true },
               ]
             },
             col_2: {
-              title: "Google Devfest",
+              title: "Google DevFest",
               items: [
-                { name: "https://www.youtube.com/watch?v=o22Ug6bS-U0", label: "Devfest 2019", isExternal: true, },
-                { name: "https://www.youtube.com/watch?v=0l8MfXd4GPg", label: "Devfest 2018", isExternal: true, },
-                { name: "https://www.youtube.com/watch?v=bKqbil6CQY0", label: "Devfest 2017", isExternal: true, },
-                { name: "https://www.youtube.com/watch?v=dsv9ZPhxPl4", label: "Devfest 2016", isExternal: true, },
+                { name: "devfest2024", label: "DevFest 2024" },
+                { name: "devfest2022", label: "DevFest 2022" },
+                { name: "devfest2021", label: "DevFest 2021" },
+                { name: "https://www.youtube.com/watch?v=o22Ug6bS-U0", label: "DevFest 2019", isExternal: true },
+                { name: "https://www.youtube.com/watch?v=0l8MfXd4GPg", label: "DevFest 2018", isExternal: true },
+                { name: "https://www.youtube.com/watch?v=bKqbil6CQY0", label: "DevFest 2017", isExternal: true },
+                { name: "https://www.youtube.com/watch?v=dsv9ZPhxPl4", label: "DevFest 2016", isExternal: true },
               ]
             },
             col_3: {
-              title: "Woman Tech Makers",
+              title: "Build With AI",
               items: [
-                {
-                  name: "",
-                  label: "Update soon",
-                },
+                { name: "bwa2026", label: "Build With AI 2026" },
+                { name: "bwa2025", label: "Build With AI 2025" },
               ]
             },
             col_4: {
-              title: "Others",
+              title: "WomenTechmakers & Others",
               items: [
-                {
-                  name: "https://www.youtube.com/watch?v=oUHpYqGZQ10",
-                  label: "Vietnam Online Hackacthon 2020",
-                  isExternal: true,
-                },
+                { name: "wtm2023", label: "WomenTechmakers 2023" },
+                { name: "https://www.youtube.com/watch?v=oUHpYqGZQ10", label: "Vietnam Online Hackathon 2020", isExternal: true },
               ]
             },
           }

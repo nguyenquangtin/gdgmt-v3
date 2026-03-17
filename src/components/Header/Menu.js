@@ -7,6 +7,27 @@ import { menuItems } from "../../data/menudata"
 const isObject = function (a) {
   return !!a && a.constructor === Object
 }
+
+// Renders a single megamenu column, handling both internal routes and external URLs
+const MegaCol = ({ col }) => {
+  if (!col) return null
+  return (
+    <Col>
+      {col.title && <span className="megamenu-column-title">{col.title}</span>}
+      {col.items.map((item, idx) => (
+        <Nav.Item className="megamenu-nav-item" key={idx}>
+          {item.isExternal ? (
+            <a href={item.name} target="_blank" rel="noopener noreferrer">
+              {item.label}
+            </a>
+          ) : (
+            <Link to={`/${item.name}`}>{item.label}</Link>
+          )}
+        </Nav.Item>
+      ))}
+    </Col>
+  )
+}
 const Menu = () => {
 
   return (
@@ -49,112 +70,13 @@ const Menu = () => {
                             )}
                             {col > 0 && (
                               <>
-                                <Col
-                                  lg={col}
-                                  className="mega-dropdown-menu-block row"
-                                >
-                                  {items.col_1 && (
-                                    <Col>
-                                      {items.col_1.title && <span className="megamenu-column-title">{items.col_1.title}</span>}
-                                      {items.col_1.items.map((item, index) => {
-                                        return (
-                                          <Nav.Item className="megamenu-nav-item"
-                                          key={index + "c1"}>
-                                            <Link
-                                              href={`/${item.name}`}
-                                              to={`/${item.name}`}
-                                            >
-                                              {item.label}
-                                            </Link>
-                                          </Nav.Item>
-                                        )
-                                      })}
-                                    </Col>
-                                  )}
-                                  {items.col_2 && (
-                                    <Col>
-                                    {items.col_2.title && <span className="megamenu-column-title">{items.col_2.title}</span>}
-                                      {items.col_2.items.map((item, index) => {
-                                        return (
-                                          <Nav.Item className="megamenu-nav-item"
-                                          key={index + "c2"}>
-                                            <Link
-                                              to={`/${item.name}`}
-                                            >
-                                              {item.label}
-                                            </Link>
-                                          </Nav.Item>
-                                        )
-                                      })}
-                                    </Col>
-                                  )}
-                                  {items.col_3 && (
-                                    <Col>
-                                    {items.col_3.title && <span className="megamenu-column-title">{items.col_3.title}</span>}
-                                      {items.col_3.items.map((item, index) => {
-                                        return (
-                                          <Nav.Item className="megamenu-nav-item" key={index + "c4"}>
-                                            <Link
-                                              to={`/${item.name}`}
-                                            >
-                                              {item.label}
-                                            </Link>
-                                          </Nav.Item>
-                                        )
-                                      })}
-                                    </Col>
-                                  )}
-                                  {items.col_4 && (
-                                    <Col>
-                                    {items.col_4.title && <span className="megamenu-column-title">{items.col_4.title}</span>}
-                                      {items.col_4.items.map((item, index) => {
-                                        return (
-                                          <Nav.Item className="megamenu-nav-item" key={index + "c5"}>
-                                            <Link
-                                              to={`/${item.name}`}
-
-                                            >
-                                              {item.label}
-                                            </Link>
-                                          </Nav.Item>
-                                        )
-                                      })}
-                                    </Col>
-                                  )}
-                                  {items.col_5 && (
-                                    <Col>
-                                    {items.col_5.title && <span className="megamenu-column-title">{items.col_5.title}</span>}
-                                      {items.col_5.items.map((item, index) => {
-                                        return (
-                                          <Nav.Item className="megamenu-nav-item" key={index + "c6"}>
-                                            <Link
-                                              to={`/${item.name}`}
-
-                                            >
-                                              {item.label}
-                                            </Link>
-                                          </Nav.Item>
-                                        )
-                                      })}
-                                    </Col>
-                                  )}
-                                  {items.col_6 && (
-                                    <Col>
-                                    {items.col_6.title && <span className="megamenu-column-title">{items.col_1.title}</span>}
-                                      {items.col_6.items.map((item, index) => {
-                                        return (
-                                          <Nav.Item className="megamenu-nav-item" key={index + "c7"}>
-                                            <Link
-                                              to={`/${item.name}`}
-
-                                            >
-                                              {item.label}
-                                            </Link>
-                                          </Nav.Item>
-                                        )
-                                      })}
-                                    </Col>
-                                  )}
+                                <Col lg={col} className="mega-dropdown-menu-block row">
+                                  <MegaCol col={items.col_1} />
+                                  <MegaCol col={items.col_2} />
+                                  <MegaCol col={items.col_3} />
+                                  <MegaCol col={items.col_4} />
+                                  <MegaCol col={items.col_5} />
+                                  <MegaCol col={items.col_6} />
                                 </Col>
                               </>
                             )}
